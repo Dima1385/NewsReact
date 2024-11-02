@@ -13,6 +13,7 @@ import { useAction } from "./hooks/useAction";
 import UsersPage from "./pages/users/UsersPage";
 import RolesPage from "./pages/roles/RolesPage";
 import NewRolePage from "./pages/roles/NewRolePage";
+import UserManagementPage from "./pages/UserManagementPage/UserManagementPage"; 
 
 const App = () => {
     const { isAuth, role } = useSelector((store) => store.auth);
@@ -41,6 +42,7 @@ const App = () => {
                             <Route path="newrole/:roleid" element={<NewRolePage />} />
                             <Route path="newrole" element={<NewRolePage />} />
                         </Route>
+                        <Route path="user-management" element={<UserManagementPage />} /> {/* Новий маршрут */}
                     </>
                 )}
                 {!isAuth && (
